@@ -1,0 +1,5 @@
+Import data to my MongoDB Atlas Cluster:
+
+Shell command line:
+
+mongoimport --type csv --headerline --db mflix --collection myDataSample --host "<CLUSTER>/<SEED_LIST>" --authenticationDatabase admin --ssl --username myUserName --password myPassword --file myDatal.csv
