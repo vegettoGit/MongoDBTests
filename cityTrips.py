@@ -1,3 +1,5 @@
+# Coursera Introduction to MongoDB
+
 from pymongo import MongoClient
 
 import pprint
