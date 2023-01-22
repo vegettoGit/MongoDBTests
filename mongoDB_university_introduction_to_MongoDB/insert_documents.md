@@ -1,3 +1,4 @@
+```
 db.accounts.insertMany(
  [
   {
@@ -30,3 +31,4 @@ db.accounts.insertMany(
   },
  ]
 )
+```

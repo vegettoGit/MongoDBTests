@@ -1,3 +1,4 @@
+```
 db.accounts.insertOne(
  {
    "account_id": 111333,
@@ -9,3 +10,4 @@ db.accounts.insertOne(
    "last_updated": new Date()
  }
 )
+```
