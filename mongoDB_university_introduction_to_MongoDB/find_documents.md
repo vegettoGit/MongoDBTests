@@ -132,4 +132,5 @@ db.sales.find(
     purchaseMethod: 'In store'
   },
   (...)
+]
 ```
