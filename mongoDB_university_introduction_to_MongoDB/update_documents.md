@@ -1,9 +1,14 @@
 ```
-db.birds.findAndModify(
+db.birds.updateMany(
   {
-    query: { common_name: "Blue Jay" },
-    update: { $inc: { sightings_count: 1 }},
-    new: true,
+    common_name: {
+      $in: ["Blue Jay", "Grackle"],
+    },
+  },
+  {
+    $set: {
+      last_seen: ISODate("2022-01-01"),
+    },
   }
 )
 ```
@@ -12,14 +17,11 @@ db.birds.findAndModify(
 
 ```
 {
-  _id: ObjectId("628682d92f3fa87b7d86dcce"),
-  common_name: 'Blue Jay',
-  scientific_name: 'Cyanocitta cristata',
-  wingspan_cm: 34.17,
-  habitat: 'forests',
-  diet: [ 'vegetables', 'nuts', 'grains' ],
-  sightings_count: 5,
-  last_seen: ISODate("2022-05-19T20:20:44.083Z")
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
 }
 ```
 
