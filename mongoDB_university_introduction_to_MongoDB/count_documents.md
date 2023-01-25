@@ -3,7 +3,7 @@
 ```
 db.sales.countDocuments(
    {}
-);
+)
 ```
 
 ```
