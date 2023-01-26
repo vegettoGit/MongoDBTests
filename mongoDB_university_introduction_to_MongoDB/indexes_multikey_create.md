@@ -20,14 +20,25 @@ db.accounts.explain().find({ transfers_complete: { $in: ["TR617907396"] } })
     indexFilterSet: false,
     parsedQuery: { transfers_complete: { '$eq': 'TR617907396' } },
     queryHash: 'D341FD99',
-    planCacheKey: 'D341FD99',
+    planCacheKey: '061129EA',
     maxIndexedOrSolutionsReached: false,
     maxIndexedAndSolutionsReached: false,
     maxScansToExplodeReached: false,
     winningPlan: {
-      stage: 'COLLSCAN',
-      filter: { transfers_complete: { '$eq': 'TR617907396' } },
-      direction: 'forward'
+      stage: 'FETCH',
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: { transfers_complete: 1 },
+        indexName: 'transfers_complete_1',
+        isMultiKey: true,
+        multiKeyPaths: { transfers_complete: [ 'transfers_complete' ] },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: { transfers_complete: [ '["TR617907396", "TR617907396"]' ] }
+      }
     },
     rejectedPlans: []
   },
@@ -54,13 +65,13 @@ db.accounts.explain().find({ transfers_complete: { $in: ["TR617907396"] } })
   },
   ok: 1,
   '$clusterTime': {
-    clusterTime: Timestamp({ t: 1674761766, i: 1 }),
+    clusterTime: Timestamp({ t: 1674761865, i: 7 }),
     signature: {
-      hash: Binary(Buffer.from("a7f859979b99a792c3371bc00ec51b55ca982957", "hex"), 0),
+      hash: Binary(Buffer.from("a7af6e939c283cd4b48d268a6de6b2cd637d804c", "hex"), 0),
       keyId: Long("7154370897485234178")
     }
   },
-  operationTime: Timestamp({ t: 1674761766, i: 1 })
+  operationTime: Timestamp({ t: 1674761865, i: 7 })
 }
 ```
 
