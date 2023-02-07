@@ -35,7 +35,7 @@ ID                         NAME                            DATABASE          COL
 ### Now we connect to the Atlas Cluster (replacing the user, password and connection string fields)
 ```
 mongosh -u myAtlasDBUser -p myatlas-001 $MY_ATLAS_CONNECTION_STRING/sample_supplies
-
+```
 
 ### Now we create an aggregation pipeline
 ```
