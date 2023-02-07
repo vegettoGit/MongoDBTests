@@ -14,7 +14,7 @@ atlas clusters search indexes create --clusterName myAtlasClusterEDU -f /app/sea
         "dynamic": true
     }
 }
-
+```
 
 ### Returned result
 ```
